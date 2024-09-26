@@ -1,0 +1,72 @@
+<!-- ! Directives Exercise:
+
+Expected Outcome:
+Initially, the text "The condition is true!" will be displayed.
+When you click the button, the condition toggles, and "The condition is false!" will be displayed.
+Clicking the button again will toggle between these two states. -->
+<!-- <h1 class="mt-10 text-2xl font-extrabold text-red-600">
+  Conditional Statement
+</h1> -->
+<!--? condition statement -->
+<!-- @if (condition) {
+<h1 class="text-4xl font-extrabold underline">Hello world</h1>
+
+} @else {
+<h1 class="text-4xl font-extrabold underline">Bye Bye world</h1>
+} -->
+
+<!-- <button
+  (click)="changeState()"
+  class="bg-green-700 w-28 h-12 rounded-lg font-extrabold text-2xl text-white cursor-pointer"
+>
+  Click
+</button> -->
+
+<!--?  Dependancy INJECTION-->
+<!-- <h1 class="mt-10 text-2xl font-extrabold text-red-600">Dependency Injection</h1>
+@if(myService.getData()){
+
+<h1 class="mt-10 text-xl font-extrabold">Dependancy Injection True</h1>
+} @else{
+<h1 class="mt-10 text-xl font-extrabold">Dependancy Injection False</h1>
+}
+
+<h1 class="mt-10 text-2xl font-extrabold text-red-600">Custom Pipe</h1> -->
+<!--? custom pipe -->
+<!-- <h1 class="mt-10 text-xl font-extrabold">{{ 1 | customPipe }}</h1> -->
+
+<!--? pipe chaning -->
+<!-- <h1 class="mt-10 text-2xl font-extrabold text-red-600">Pipe Chain</h1>
+<h1 class="mt-10 text-xl font-extrabold text-black">
+  {{ currentDate | date : "short" | uppercase }}
+</h1> -->
+
+<!--! Auth Guard -->
+<nav class="bg-green-100 flex justify-between h-16 items-center px-5">
+  <h1 class="text-2xl font-extrabold text-green-800 cursor-pointer">
+    .Anguler
+  </h1>
+  <ul class="flex gap-2">
+    <li
+      class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold cursor-pointer"
+    >
+      <a [routerLink]="['']">Home</a>
+    </li>
+    <li
+      class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold cursor-pointer"
+    >
+      <a [routerLink]="['one']">One</a>
+    </li>
+    <li
+      class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold cursor-pointer"
+    >
+      <a [routerLink]="['two']">Two</a>
+    </li>
+    <li
+      class="bg-green-600 text-white px-4 py-2 rounded-lg font-semibold cursor-pointer"
+    >
+      <a [routerLink]="['login']">Login</a>
+    </li>
+  </ul>
+</nav>
+<router-outlet></router-outlet>
